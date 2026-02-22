@@ -1,0 +1,14 @@
+{
+    "name": "signflow-workspace",
+    "version": "1.0.0",
+    "description": "Root workspace to run Signflow frontend and backend together",
+    "scripts": {
+        "dev:frontend": "cd signflow-frontend && npm run dev",
+        "dev:backend": "cd DocsSignatureAppBE && sh ./mvnw spring-boot:run",
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "install:all": "cd signflow-frontend && npm install"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
