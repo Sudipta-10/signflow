@@ -242,8 +242,9 @@ export default function Editor() {
     };
 
     const pdfFileConfig = useMemo(() => {
+        const url = `https://signflow-qzv8.onrender.com/api/documents/${id}/download`;
         return {
-            url: `http://localhost:8084/api/documents/${id}/download`,
+            url: url,
             httpHeaders: typeof window !== "undefined" ? { Authorization: `Bearer ${localStorage.getItem("token")}` } : {}
         };
     }, [id]);

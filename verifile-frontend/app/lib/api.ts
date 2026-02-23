@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8084";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://signflow-qzv8.onrender.com";
 
 export const loginUser = async (email: string, password: string) => {
   const res = await fetch(`${BASE_URL}/api/auth/login`, {
