@@ -200,9 +200,9 @@ export default function Dashboard() {
           receivers,
           settings: { setOrder, changeExpiration, multipleRequests, emailNotifications, enableReminders, reminderDays, digitalSignature, setLanguageState, language, customizeEmail, showUuid, signatureVerificationCode, emailBranding }
         };
-        sessionStorage.setItem("signflow_request", JSON.stringify(requestData));
+        sessionStorage.setItem("Verifile_request", JSON.stringify(requestData));
       } else {
-        sessionStorage.removeItem("signflow_request");
+        sessionStorage.removeItem("Verifile_request");
       }
 
       const response = await uploadDocument(selectedFile, title, token!);
@@ -302,9 +302,9 @@ export default function Dashboard() {
       <nav className="flex items-center justify-between px-8 py-4 border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50 bg-purple-900/10">
         <div className="flex flex-col items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300">
           <div className="relative w-24 h-24 flex items-center justify-center">
-            <Image src="/sf-logo.png" alt="Signflow Logo" fill className="object-contain" priority />
+            <Image src="/sf-logo.png" alt="Verifile Logo" fill className="object-contain" priority />
           </div>
-          <span className="text-xs font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 drop-shadow-sm -mt-3">Signflow</span>
+          <span className="text-xs font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 drop-shadow-sm -mt-3">Verifile</span>
         </div>
         <button
           onClick={logout}

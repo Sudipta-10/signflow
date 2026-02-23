@@ -8,9 +8,9 @@ export default function Home() {
       <nav className="flex items-center justify-between px-6 py-4 border-b border-purple-500/20 bg-purple-900/10 backdrop-blur-xl sticky top-0 z-50">
         <div className="flex flex-col items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300">
           <div className="relative w-24 h-24 flex items-center justify-center">
-            <Image src="/sf-logo.png" alt="Signflow Logo" fill className="object-contain" priority />
+            <Image src="/sf-logo.png" alt="Verifile Logo" fill className="object-contain" priority />
           </div>
-          <span className="text-xs font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 drop-shadow-sm -mt-3">Signflow</span>
+          <span className="text-xs font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 drop-shadow-sm -mt-3">Verifile</span>
         </div>
         <div className="flex gap-4">
           <Link href="/login" className="px-5 py-2 text-sm font-medium text-zinc-300 hover:text-white transition-colors">
@@ -26,7 +26,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center px-4 pt-32 pb-24 text-center">
         <div className="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-400 mb-8 backdrop-blur-sm">
           <span className="flex h-2 w-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
-          Signflow is now in Beta
+          Verifile is now in Beta
         </div>
 
         <h1 className="max-w-4xl text-5xl md:text-7xl font-extrabold tracking-tight mb-8 bg-gradient-to-b from-white to-zinc-500 bg-clip-text text-transparent">
@@ -34,7 +34,7 @@ export default function Home() {
         </h1>
 
         <p className="max-w-2xl text-lg md:text-xl text-zinc-400 mb-12 font-light leading-relaxed">
-          Signflow provides a secure, fast, and beautiful experience for executing digital signatures. Keep your workflows moving effortlessly.
+          Verifile provides a secure, fast, and beautiful experience for executing digital signatures. Keep your workflows moving effortlessly.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full justify-center max-w-md">

@@ -99,7 +99,7 @@ export default function Editor() {
             setSignatureBase64(savedSig);
         }
 
-        const savedReq = sessionStorage.getItem("signflow_request");
+        const savedReq = sessionStorage.getItem("Verifile_request");
         if (savedReq) {
             setRequestData(JSON.parse(savedReq));
         }
@@ -129,7 +129,7 @@ export default function Editor() {
         if (typeof window === 'undefined') return;
         if (!signatureBase64) return;
         try {
-            e.dataTransfer.setData("application/signflow-signature", "true");
+            e.dataTransfer.setData("application/Verifile-signature", "true");
             e.dataTransfer.effectAllowed = "copy";
         } catch (err) { }
     };
@@ -146,7 +146,7 @@ export default function Editor() {
         if (typeof window === 'undefined') return;
         e.preventDefault();
         try {
-            const isSignature = e.dataTransfer.getData("application/signflow-signature");
+            const isSignature = e.dataTransfer.getData("application/Verifile-signature");
             if (!isSignature || !pdfWrapperRef.current) return;
 
             const rect = pdfWrapperRef.current.getBoundingClientRect();
@@ -187,7 +187,7 @@ export default function Editor() {
                 const { sendSignatureRequest } = await import("../../../lib/api");
                 await sendSignatureRequest(id, requestData, token);
 
-                sessionStorage.removeItem("signflow_request");
+                sessionStorage.removeItem("Verifile_request");
                 alert("Signature request sent successfully to " + requestData.receivers.length + " receiver(s)!");
                 router.push("/dashboard");
             } catch (err) {
@@ -266,9 +266,9 @@ export default function Editor() {
                     </button>
                     <div className="flex flex-col items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300">
                         <div className="relative w-24 h-24 flex items-center justify-center">
-                            <Image src="/sf-logo.png" alt="Signflow Editor Logo" fill className="object-contain" priority />
+                            <Image src="/sf-logo.png" alt="Verifile Editor Logo" fill className="object-contain" priority />
                         </div>
-                        <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 drop-shadow-sm -mt-3">Signflow Editor</span>
+                        <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 drop-shadow-sm -mt-3">Verifile Editor</span>
                     </div>
                 </div>
                 <div className="text-sm font-medium text-zinc-500 truncate max-w-md">
