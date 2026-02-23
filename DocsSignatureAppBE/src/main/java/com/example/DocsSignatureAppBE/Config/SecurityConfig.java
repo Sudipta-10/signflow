@@ -61,8 +61,9 @@ public class SecurityConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
+                String frontendUrl = System.getenv("FRONTEND_URL") != null ? System.getenv("FRONTEND_URL") : "http://localhost:3000";
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000","http://localhost:3001")
+                        .allowedOriginPatterns("http://localhost:3000", "http://localhost:3001", frontendUrl, "https://*.vercel.app")
                         .allowedMethods("*")
                         .allowedHeaders("*");
             }
