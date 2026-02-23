@@ -3,6 +3,7 @@ import { useEffect, useState, useRef, useMemo } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { getDocumentById, finalizeSignature, DocumentDetailDto } from "../../../lib/api";
 import { Document, Page, pdfjs } from "react-pdf";
+import Image from "next/image";
 import Draggable from "react-draggable";
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -263,17 +264,11 @@ export default function Editor() {
                     <button onClick={() => router.push("/dashboard")} className="text-zinc-500 hover:text-zinc-800 transition-colors p-2 rounded-full hover:bg-zinc-100">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
                     </button>
-                    <div className="flex flex-col items-center justify-center gap-1.5 group cursor-pointer hover:scale-105 transition-transform duration-300">
-                        <div className="relative w-10 h-10 flex items-center justify-center">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300 shadow-[0_0_15px_rgba(59,130,246,0.6)]"></div>
-                            <div className="absolute inset-0 bg-gradient-to-bl from-purple-500 to-pink-500 rounded-xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-300 opacity-70 mix-blend-screen"></div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="relative w-5 h-5 text-white drop-shadow-md">
-                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                                <path d="M14 2v6h6" />
-                                <path d="M9 15c0-1.5 1.5-2 3-2s3 .5 3 2-1.5 2-3 2-3 .5-3 2" />
-                            </svg>
+                    <div className="flex flex-col items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300">
+                        <div className="relative w-24 h-24 flex items-center justify-center">
+                            <Image src="/sf-logo.png" alt="Signflow Editor Logo" fill className="object-contain" priority />
                         </div>
-                        <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-purple-300 drop-shadow-sm">Signflow Editor</span>
+                        <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 drop-shadow-sm -mt-3">Signflow Editor</span>
                     </div>
                 </div>
                 <div className="text-sm font-medium text-zinc-500 truncate max-w-md">
