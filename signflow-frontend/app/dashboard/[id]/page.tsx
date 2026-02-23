@@ -181,7 +181,7 @@ export default function DocumentDetail() {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-black text-white flex items-center justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-purple-950 via-[#1a0b2e] to-black text-white flex items-center justify-center">
                 <div className="w-8 h-8 border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin"></div>
             </div>
         );
@@ -190,13 +190,13 @@ export default function DocumentDetail() {
     if (!doc) return null;
 
     return (
-        <div className="min-h-screen bg-black text-white selection:bg-blue-500/30 font-sans">
+        <div className="min-h-screen bg-gradient-to-br from-purple-950 via-[#1a0b2e] to-black text-white selection:bg-purple-500/30 font-sans">
             <style dangerouslySetInnerHTML={{
                 __html: `
                 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script:wght@600&family=Great+Vibes&family=Pacifico&display=swap');
             `}} />
 
-            <nav className="flex items-center px-8 py-4 border-b border-white/10 backdrop-blur-md sticky top-0 z-50 bg-black/50">
+            <nav className="flex items-center px-8 py-4 border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50 bg-purple-900/10">
                 <Link href="/dashboard" className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
                     <span className="text-xl">←</span> Back to Dashboard
                 </Link>

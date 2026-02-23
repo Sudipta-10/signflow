@@ -256,18 +256,24 @@ export default function Editor() {
     }
 
     return (
-        <div className="min-h-screen bg-[#f3f4f6] flex flex-col font-sans h-screen overflow-hidden">
+        <div className="min-h-screen bg-gradient-to-br from-purple-950 via-[#1a0b2e] to-black flex flex-col font-sans h-screen overflow-hidden text-white">
             {/* Navbar Minimal */}
-            <nav className="flex items-center justify-between px-6 py-3 bg-white border-b border-zinc-200 flex-none z-50">
+            <nav className="flex items-center justify-between px-6 py-3 border-b border-purple-500/20 bg-purple-900/10 backdrop-blur-xl flex-none z-50">
                 <div className="flex items-center gap-4">
                     <button onClick={() => router.push("/dashboard")} className="text-zinc-500 hover:text-zinc-800 transition-colors p-2 rounded-full hover:bg-zinc-100">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
                     </button>
-                    <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded bg-red-500 text-white flex items-center justify-center font-bold text-sm shadow-sm">
-                            S
+                    <div className="flex flex-col items-center justify-center gap-1.5 group cursor-pointer hover:scale-105 transition-transform duration-300">
+                        <div className="relative w-10 h-10 flex items-center justify-center">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300 shadow-[0_0_15px_rgba(59,130,246,0.6)]"></div>
+                            <div className="absolute inset-0 bg-gradient-to-bl from-purple-500 to-pink-500 rounded-xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-300 opacity-70 mix-blend-screen"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="relative w-5 h-5 text-white drop-shadow-md">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                                <path d="M14 2v6h6" />
+                                <path d="M9 15c0-1.5 1.5-2 3-2s3 .5 3 2-1.5 2-3 2-3 .5-3 2" />
+                            </svg>
                         </div>
-                        <span className="font-semibold text-zinc-800">Signflow Editor</span>
+                        <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-purple-300 drop-shadow-sm">Signflow Editor</span>
                     </div>
                 </div>
                 <div className="text-sm font-medium text-zinc-500 truncate max-w-md">

@@ -2,14 +2,20 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-blue-500/30">
+    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-[#1a0b2e] to-black text-white selection:bg-purple-500/30">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-4 border-b border-white/10 backdrop-blur-md sticky top-0 z-50">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-lg shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-            S
+      <nav className="flex items-center justify-between px-6 py-4 border-b border-purple-500/20 bg-purple-900/10 backdrop-blur-xl sticky top-0 z-50">
+        <div className="flex flex-col items-center justify-center gap-1.5 group cursor-pointer hover:scale-105 transition-transform duration-300">
+          <div className="relative w-10 h-10 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300 shadow-[0_0_15px_rgba(59,130,246,0.6)]"></div>
+            <div className="absolute inset-0 bg-gradient-to-bl from-purple-500 to-pink-500 rounded-xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-300 opacity-70 mix-blend-screen"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="relative w-5 h-5 text-white drop-shadow-md">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+              <path d="M14 2v6h6" />
+              <path d="M9 15c0-1.5 1.5-2 3-2s3 .5 3 2-1.5 2-3 2-3 .5-3 2" />
+            </svg>
           </div>
-          <span className="text-xl font-semibold tracking-tight">Signflow</span>
+          <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-purple-300 drop-shadow-sm">Signflow</span>
         </div>
         <div className="flex gap-4">
           <Link href="/login" className="px-5 py-2 text-sm font-medium text-zinc-300 hover:text-white transition-colors">
